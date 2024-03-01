@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <left><img src="https://img.freepik.com/vector-gratis/logotipo-viaje-detallado_23-2148616611.jpg" width="100px" height="100px"> </left>
+    <title>Sistema de Turismo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #3399ff;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #3399ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1a75ff;
+        }
+
+        button {
+            background-color: #3399ff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a75ff;
+        }
+    </style>
+</head>
+ <center><body>
+    <h1>Información sobre Ciudades</h1>
+    <table border="1">
+        <tr>
+            <form action="../config/Ver.php" method="post">
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>País</th>
+            <th>Población</th>
+            <th>Clima</th>
+             <input type="submit" value="Ver informacion">
+        </tr>
+        <!-- Aquí se mostrarán las ciudades desde la base de datos -->
+    </table> </form>
+
+    <h1>Información sobre Turistas</h1>
+    <table border="1">
+        <tr>
+           <form action="../config/turista.php" method="post">
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+            <th>Edad</th>
+            <th>Intereses</th>
+            <input type="submit" value="Ver informacion">
+        </tr>
+        <!-- Aquí se mostrarán los turistas desde la base de datos -->
+    </table> </form>
+
+    <h1>Relación de Visitas</h1>
+    <table border="1">
+        <tr>
+            <form action="../config/visita.php" method="post">
+            <th>Turista</th>
+            <th>Ciudades Visitadas</th>
+            <th>Añadir Visita</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>París, Roma</td>
+            <td><button onclick="agregarVisita()">Añadir Visita</button></td>
+        </tr>
+        <!-- Aquí se mostrarán las visitas desde la base de datos -->
+    </table> </form>
+
+    <script>
+        function agregarVisita() {
+            // Aquí puedes implementar la lógica para agregar una visita a la base de datos
+            alert("Ingresando");
+        }
+    </script>
+</body> </center>
+</html>
+
